@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --clr-cyan: hsl(185, 75%, 39%);
+    --clr-dark: hsl(229, 23%, 23%);
+    --clr-gray: hsl(227, 10%, 46%);
+
+    --clr-dark-gray: hsl(0, 0%, 59%);
+
+    --fs-big: 18px;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-cyan);
+    position: relative;
+}
+
+/* General Classes */
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+.fz-small {
+    font-size: 12px;
+}
+
+.title {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-big);
+    color: var(--clr-dark);
+}
+
+.description {
+    font-weight: var(--fw-regular);
+    color: var(--clr-gray);
+}
+
+/* Patterns */
+
+.pattern-top {
+    background: url('./images/bg-pattern-top.svg');
+    height: 55%;
+    width: 55%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transform: rotate(180deg);
+}
+
+.pattern-bottom {
+    background: url('./images/bg-pattern-bottom.svg');
+    height: 55%;
+    width: 55%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    transform: rotate(0deg);
+}
+
+/* Card */
+
+.card {
+    width: 325px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    z-index: 1;
+}
+
+.card__img {
+    background: url('./images/bg-pattern-card.svg');
+    position: relative;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.card__img--circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+    position: absolute;
+    top: 70%;
+    left: 35%;
+}
+
+.card__info {
+    background: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid var(--clr-dark-gray);
+}
+
+.data__followers {
+    text-align: center;
+}
